@@ -2,6 +2,14 @@
 
     <body>
 
+        <container name="some.container" htmlTag="div" htmlClass="container">
+            <!-- Force container to render -->
+            <block class="Magento\Framework\View\Element\Text">
+                <arguments>
+                    <argument name="text" xsi:type="string">Free shipping for all orders</argument>
+                </arguments>
+            </block>
+        </container>
         <referenceBlock name="logo">
 
             <arguments>
