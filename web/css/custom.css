@@ -1,0 +1,13 @@
+.second-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.page-topbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+}

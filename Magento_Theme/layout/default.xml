@@ -1,15 +1,21 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
+    <head>
+        <css src="css/custom.css" rel="stylesheet" type="text/css"  />
+    </head>
     <body>
 
-        <container name="some.container" htmlTag="div" htmlClass="container">
-            <!-- Force container to render -->
-            <block class="Magento\Framework\View\Element\Text">
-                <arguments>
-                    <argument name="text" xsi:type="string">Free shipping for all orders</argument>
-                </arguments>
-            </block>
-        </container>
+       <container name="topbar.container" as="topbar_container" htmlTag="div" htmlClass="page-topbar" before="-">
+           <container name="second.container" htmlTag="div" htmlClass="second-bar">
+                <block class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string">Free shipping for all orders</argument>
+                    </arguments>
+                </block>
+            </container>
+       </container>
+
+       <move element="topbar.container" destination="header.container"  before="-"/>
         <referenceBlock name="logo">
 
             <arguments>
