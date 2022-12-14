@@ -3,7 +3,7 @@
  * See COPYING.txt for license details.
  */
 
-define([
+ define([
     'jquery',
     'Magento_Customer/js/model/authentication-popup',
     'Magento_Customer/js/customer-data',
@@ -87,7 +87,8 @@ define([
              */
             events['click ' + this.options.button.remove] =  function (event) {
                 event.stopPropagation();
-                self._removeItem($(event.currentTarget));
+                this._removeItem($(event.currentTarget));
+                event.stopImmediatePropagation();
             };
 
             /**
