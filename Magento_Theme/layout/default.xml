@@ -6,11 +6,7 @@
     <body>
 
        <container name="topbar.container" as="topbar_container" htmlTag="div" htmlClass="page-topbar" before="-">
-            <block ifconfig="carriers/freeshipping/active"  class="Magento\Framework\View\Element\Text">
-                <arguments>
-                    <argument name="text" xsi:type="string">Free shipping for all orders</argument>
-                </arguments>
-            </block>
+            <block ifconfig="carriers/freeshipping/active"  class="Magento\Framework\View\Element\Text" template="Magento_Theme::text.phtml"/>
        </container>
 
        <move element="topbar.container" destination="header.container"  before="-"/>
